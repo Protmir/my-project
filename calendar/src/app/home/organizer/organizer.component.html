@@ -1,0 +1,32 @@
+<section>
+  <header>
+    Organizer: <strong>{{dateService.date | async | moment:'DD.MM.YYYY'}}</strong>
+  </header>
+  <hr />
+
+  <main>
+    <ul>
+      <li class="task">
+        <span>
+          <strong>1.</strong>
+          sefsfsfesf
+        </span>
+        <button mat-button type="remove" >
+          Remove
+        </button>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <form (ngSubmit)="submit()" [formGroup]="form">
+      <mat-form-field>
+      <input matInput type="text">
+      </mat-form-field>
+      <button mat-button type="submit" [disabled]="form.invalid">
+        Add
+      </button>
+    </form>
+  </footer>
+</section>
+
